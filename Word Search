@@ -1,0 +1,20 @@
+/*jshint multistr:true */
+var text = "Put text to search here.";
+var searchWord = "word-to-search-for";
+var hits = []; <!-- This is the array that the search will push it's results to. -->
+
+<!-- Search Code Begins Here -->
+for(var i=0; i<text.length; i++) {
+    if (text[i] === searchWord[0]) {
+        for(var j=i; j < i + searchWord.length; j++) {
+            hits.push(text[j]);
+        }
+    }
+}
+
+if (hits.length === 0) {
+    console.log("Your name wasn't found!");
+} else {
+    console.log(hits);
+}
+    
