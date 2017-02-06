@@ -1,0 +1,38 @@
+var contacts = [bob, mary];
+
+function printPerson(person) {
+    console.log(person.firstName + " " + person.lastName);
+}
+
+function list() {
+	var contactsLength = contacts.length;
+	for (var i = 0; i < contactsLength; i++) {
+		printPerson(contacts[i]);
+	}
+}
+
+var search = function(lastName){
+    var contactLength = contacts.length;
+    
+    for(var i=0; i < contactLength; i++){
+        if(contacts[i].lastName === lastName){
+           printPerson(contacts[i]);
+            }
+        }
+    
+    };
+    
+  search("Jones");
+  
+  function add(firstName, lastName, email, phoneNumber){
+      contacts[contacts.length] = {
+          firstName : firstName,
+          lastName : lastName,
+          phoneNumber: phoneNumber,
+          email: email
+          };
+      
+      }
+      
+add ("Doggy","Bark","doggybark@ex.com","700-000-1234");
+list();
